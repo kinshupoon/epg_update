@@ -49,6 +49,38 @@ http://[2409:8087:3869:8021:1001::e5]:6610/PLTV/88888910/224/3221226248/index.m3
 http://[2409:8087:3869:8021:1001::e5]:6610/PLTV/88888910/224/3221226274/index.m3u8
 #EXTINF:-1 tvg-id="凤凰香港" tvg-name="凤凰香港" tvg-logo="https://live.fanmingming.com/tv/凤凰卫视香港台.png" group-title="香港",凤凰香港
 http://[2409:8087:3869:8021:1001::e5]:6610/PLTV/88888910/224/3221226251/index.m3u8
+#EXTINF:-1 tvg-id="无线新闻" tvg-name="无线新闻" tvg-logo="https://cdn.jsdelivr.net/gh/kinshupoon/live/tv/TVB无线新闻.jpg" group-title="香港",无线新闻
+http://r.jdshipin.com/CkuBd
+#EXTINF:-1 tvg-id="无线新闻" tvg-name="无线新闻" tvg-logo="https://cdn.jsdelivr.net/gh/kinshupoon/live/tv/TVB无线新闻.jpg" group-title="香港",无线新闻
+http://live.cooltv.top/tv/tvb.php?id=0
+#EXTINF:-1 tvg-id="无线新闻" tvg-name="无线新闻" tvg-logo="https://cdn.jsdelivr.net/gh/kinshupoon/live/tv/TVB无线新闻.jpg" group-title="香港",无线新闻
+http://www.nettvpro.live/hls/tvb.php?id=1
+#EXTINF:-1 tvg-id="无线财*·体育·资讯台" tvg-name="无线财*·体育·资讯台" tvg-logo="https://cdn.jsdelivr.net/gh/kinshupoon/live/tv/TVB財經體育資訊台.png" group-title="香港",无线财*·体育·资讯台
+http://r.jdshipin.com/jUx8K
+#EXTINF:-1 tvg-id="无线财*·体育·资讯台" tvg-name="无线财*·体育·资讯台" tvg-logo="https://cdn.jsdelivr.net/gh/kinshupoon/live/tv/TVB財經體育資訊台.png" group-title="香港",无线财*·体育·资讯台
+http://live.cooltv.top/tv/tvb.php?id=2
+#EXTINF:-1 tvg-id="无线财*·体育·资讯台" tvg-name="无线财*·体育·资讯台" tvg-logo="https://cdn.jsdelivr.net/gh/kinshupoon/live/tv/TVB財經體育資訊台.png" group-title="香港",无线财*·体育·资讯台
+http://www.nettvpro.live/hls/tvb.php?id=2
+#EXTINF:-1 tvg-id="翡翠台" tvg-name="翡翠台" tvg-logo="https://live.fanmingming.com/tv/TVB翡翠台.png" group-title="香港",翡翠台
+http://r.jdshipin.com/62WM7
+#EXTINF:-1 tvg-id="翡翠台" tvg-name="翡翠台" tvg-logo="https://live.fanmingming.com/tv/TVB翡翠台.png" group-title="香港",翡翠台
+http://162.19.247.76:22222/live/tvbfc/index.m3u8
+#EXTINF:-1 tvg-id="翡翠台" tvg-name="翡翠台" tvg-logo="https://live.fanmingming.com/tv/TVB翡翠台.png" group-title="香港",翡翠台
+http://r.jdshipin.com/n90gt
+#EXTINF:-1 tvg-id="明珠台" tvg-name="明珠台" tvg-logo="https://live.fanmingming.com/tv/TVB明珠台.png" group-title="香港",明珠台
+http://radius.8866.org:800/hls/84/index.m3u8
+#EXTINF:-1 tvg-id="明珠台" tvg-name="明珠台" tvg-logo="https://live.fanmingming.com/tv/TVB明珠台.png" group-title="香港",明珠台
+http://shazui.8866.org:800/hls/84/index.m3u8
+#EXTINF:-1 tvg-id="华丽翡翠台" tvg-name="华丽翡翠台" tvg-logo="https://live.fanmingming.com/tv/TVB翡翠台.png" group-title="香港",华丽翡翠台
+http://23.237.10.66:16410
+#EXTINF:-1 tvg-id="J2" tvg-name="J2" tvg-logo="https://live.fanmingming.com/tv/TVBJ2.png" group-title="香港",J2
+http://r.jdshipin.com/Nr5jq
+#EXTINF:-1 tvg-id="J2" tvg-name="J2" tvg-logo="https://live.fanmingming.com/tv/TVBJ2.png" group-title="香港",J2
+http://r.jdshipin.com/ndGgS
+#EXTINF:-1 tvg-id="J2" tvg-name="J2" tvg-logo="https://live.fanmingming.com/tv/TVBJ2.png" group-title="香港",J2
+http://162.19.247.76:22222/live/tvbj2/index.m3u8
+#EXTINF:-1 tvg-id="VIUTV" tvg-name="VIUTV" tvg-logo="https://live.fanmingming.com/tv/viutv.png" group-title="香港",VIUTV
+http://r.jdshipin.com/vSJvl
 #EXTINF:-1 tvg-id="CHC动作电影" tvg-name="CHC动作电影" tvg-logo="https://live.fanmingming.com/tv/CHC动作电影.png" group-title="央视",CHC动作电影
 http://[2409:8087:7000:20:1000::22]:6060/yinhe/2/ch00000090990000002055/index.m3u8?virtualDomain=yinhe.live_hls.zte.com
 #EXTINF:-1 tvg-id="CHC家庭影院" tvg-name="CHC家庭影院" tvg-logo="https://live.fanmingming.com/tv/CHC家庭影院.png" group-title="央视",CHC家庭影院
