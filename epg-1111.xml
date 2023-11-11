@@ -28878,6 +28878,9 @@
 	<programme channel="华数电子竞技" start="20231111121200 +0800" stop="20231111125000 +0800">
 		<title lang="zh">JJ斗地主冠军杯S3春季赛D组5-5</title>
 	</programme>
+	<programme channel="华数电子竞技" start="20231111125000 +0800" stop="20231111133300 +0800">
+		<title lang="zh">JJ斗地主冠军杯S3春季赛D组5-6</title>
+	</programme>
 	<channel id="华数精品剧场">
 		<display-name lang="zh">华数精品剧场</display-name>
 	</channel>
@@ -33761,6 +33764,9 @@
 	</programme>
 	<programme channel="咪咕综合体育" start="20231111121500 +0800" stop="20231111124700 +0800">
 		<title lang="zh">2023WTT法兰克福冠军赛男单1/8决赛回放：格罗特0-3张本智和（周冠达、侯英超、闫安、彭泳）</title>
+	</programme>
+	<programme channel="咪咕综合体育" start="20231111124700 +0800" stop="20231111132200 +0800">
+		<title lang="zh">2023WTT法兰克福冠军赛女单1/8决赛回放：孙颖莎3-0普利蒂卡b7帕瓦德（周冠达）</title>
 	</programme>
 	<channel id="咪咕足球">
 		<display-name lang="zh">咪咕足球</display-name>
@@ -58656,6 +58662,9 @@
 	<programme channel="爱体育" start="20231111120300 +0800" stop="20231111124600 +0800">
 		<title lang="zh">JJ斗地主冠军杯S3春季赛D组5-6</title>
 	</programme>
+	<programme channel="爱体育" start="20231111124600 +0800" stop="20231111130200 +0800">
+		<title lang="zh">JJ斗地主冠军杯S3春季赛D组5-7</title>
+	</programme>
 	<channel id="爱动漫">
 		<display-name lang="zh">爱动漫</display-name>
 	</channel>
@@ -58745,6 +58754,9 @@
 	</programme>
 	<programme channel="爱动漫" start="20231111123700 +0800" stop="20231111125400 +0800">
 		<title lang="zh">虹猫蓝兔梦之国历险记_15</title>
+	</programme>
+	<programme channel="爱动漫" start="20231111125400 +0800" stop="20231111142700 +0800">
+		<title lang="zh">飞屋环游记(国语版)</title>
 	</programme>
 	<channel id="爱历史">
 		<display-name lang="zh">爱历史</display-name>
@@ -59393,6 +59405,9 @@
 	</programme>
 	<programme channel="爱幼教" start="20231111124000 +0800" stop="20231111125300 +0800">
 		<title lang="zh">十二生肖_39</title>
+	</programme>
+	<programme channel="爱幼教" start="20231111125300 +0800" stop="20231111130600 +0800">
+		<title lang="zh">十二生肖_40</title>
 	</programme>
 	<channel id="爱悬疑">
 		<display-name lang="zh">爱悬疑</display-name>
@@ -64757,6 +64772,9 @@
 	</programme>
 	<programme channel="纯享4K" start="20231111124200 +0800" stop="20231111124700 +0800">
 		<title lang="zh">美丽中国自然4K 秦岭系列 伴竹而生</title>
+	</programme>
+	<programme channel="纯享4K" start="20231111124700 +0800" stop="20231111134600 +0800">
+		<title lang="zh">乐享汇4K “声而不凡”演唱会</title>
 	</programme>
 	<channel id="经典剧场">
 		<display-name lang="zh">经典剧场</display-name>
@@ -74607,6 +74625,9 @@
 	<programme channel="黑莓动画" start="20231111123100 +0800" stop="20231111125500 +0800">
 		<title lang="zh">捷德奥特曼普通话版第22集</title>
 	</programme>
+	<programme channel="黑莓动画" start="20231111125500 +0800" stop="20231111132000 +0800">
+		<title lang="zh">捷德奥特曼普通话版第23集</title>
+	</programme>
 	<channel id="黑莓电影">
 		<display-name lang="zh">黑莓电影</display-name>
 	</channel>
@@ -75921,6 +75942,9 @@
 	<programme channel="newtv超级电视剧" start="20231111120800 +0800" stop="20231111125000 +0800">
 		<title lang="zh">16_大侠霍元甲</title>
 	</programme>
+	<programme channel="newtv超级电视剧" start="20231111125000 +0800" stop="20231111133100 +0800">
+		<title lang="zh">17_大侠霍元甲</title>
+	</programme>
 	<channel id="newtv精品大剧">
 		<display-name lang="zh">NEWTV精品大剧</display-name>
 	</channel>
@@ -76095,6 +76119,9 @@
 	<programme channel="newtv古装剧场" start="20231111120500 +0800" stop="20231111124900 +0800">
 		<title lang="zh">39_三生三世枕上书</title>
 	</programme>
+	<programme channel="newtv古装剧场" start="20231111124900 +0800" stop="20231111133900 +0800">
+		<title lang="zh">38_说英雄谁是英雄</title>
+	</programme>
 	<channel id="newtv军旅剧场">
 		<display-name lang="zh">NEWTV军旅剧场</display-name>
 	</channel>
@@ -76259,6 +76286,9 @@
 	</programme>
 	<programme channel="newtv热播精选" start="20231111120600 +0800" stop="20231111125100 +0800">
 		<title lang="zh">01_三生三世枕上书</title>
+	</programme>
+	<programme channel="newtv热播精选" start="20231111125100 +0800" stop="20231111141900 +0800">
+		<title lang="zh">我的锦鲤男友</title>
 	</programme>
 	<channel id="newtv爱情喜剧">
 		<display-name lang="zh">NEWTV爱情喜剧</display-name>
@@ -76575,6 +76605,9 @@
 	<programme channel="newtv炫舞未来" start="20231111115500 +0800" stop="20231111125100 +0800">
 		<title lang="zh">生活服务</title>
 	</programme>
+	<programme channel="newtv炫舞未来" start="20231111125100 +0800" stop="20231111140700 +0800">
+		<title lang="zh">才艺和颜值拉满！“贼板正”的“四平青年”勇敢追爱（20230912）</title>
+	</programme>
 	<channel id="newtv精品综合">
 		<display-name lang="zh">NEWTV精品综合</display-name>
 	</channel>
@@ -76619,6 +76652,9 @@
 	</programme>
 	<programme channel="newtv精品综合" start="20231111121000 +0800" stop="20231111125900 +0800">
 		<title lang="zh">生活服务</title>
+	</programme>
+	<programme channel="newtv精品综合" start="20231111125900 +0800" stop="20231111144300 +0800">
+		<title lang="zh">柳如是</title>
 	</programme>
 	<channel id="newtv惊悚悬疑">
 		<display-name lang="zh">NEWTV惊悚悬疑</display-name>
