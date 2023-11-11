@@ -1,4 +1,3 @@
-
 name: rm old_epg
 
 on:
@@ -32,5 +31,3 @@ jobs:
           git rm "epg-"$(date -d "10 days ago" "+%m%d")".xml"
           git commit -m "Remove epg-$(date -d "10 days ago" "+%m%d").xml"
           git push origin main
-              - name: Rm 10_days_ago epg
-
