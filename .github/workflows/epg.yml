@@ -1,11 +1,11 @@
-name: epg_update
+name: epg update
 
 on:
   push:
     branches:
       - main
   schedule:
-    - cron: "10 6,15,16,22 * * *"
+    - cron: "10 4,15,16,22 * * *"
 
 jobs:
   autogreen:
@@ -37,7 +37,9 @@ jobs:
           git add epg.xml
           git commit -m "Update epg.xml"
           git add epg.xml.gz
-          git commit -m "Update epg.xml.gz"    
-          git rm "epg-"$(date -d "10 days ago" "+%m%d")".xml"
-          git commit -m "Remove epg-$(date -d "10 days ago" "+%m%d").xml"
-          git push
+          git commit -m "Update epg.xml.gz"
+          if [ -f "epg-"$(date -d "10 days ago" "+%m%d")".xml" ]; then
+            git rm "epg-"$(date -d "10 days ago" "+%m%d")".xml"
+            git commit -m "Remove epg-$(date -d "10 days ago" "+%m%d").xml"
+          fi
+          git push origin main
