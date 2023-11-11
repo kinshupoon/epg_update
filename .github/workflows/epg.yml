@@ -29,7 +29,7 @@ jobs:
           done
           sed '1,2d' "epg-"$(date -d "8 hours" "+%m%d")".xml" >> epg.xml  
           gzip -c epg.xml > epg.xml.gz
-          git config --local user.email "1062253873@qq.com"
+          git config --local user.email "${{ secrets.EMAIL }}"
           git config --local user.name "${{ github.actor }}"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git add "epg-"$(date -d "8 hours" "+%m%d")".xml"
