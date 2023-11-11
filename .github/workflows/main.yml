@@ -32,6 +32,6 @@ jobs:
           git config --local user.email "1062253873@qq.com"
           git config --local user.name "${{ github.actor }}"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git add e.xml
-          git commit -m "Update e.xml"
+          git add epg.xml epg.xml.gz "epg-"$(date -d "8 hours" "+%m%d")".xml"
+          git commit -m "Update epg.xml"
           git push -f origin main
