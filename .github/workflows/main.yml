@@ -20,7 +20,15 @@ jobs:
 
       - name: Auto green
         run: |
-          rm -f e.xml && wget https://epg.112114.xyz/pp.xml -O e.xml
+          wget https://epg.112114.xyz/pp.xml.gz -O "epg-"$(date -d "8 hours" "+%m%d")".xml.gz"
+          rm epg.xml "epg-"$(date -d "8 hours" "+%m%d")".xml" "epg-"$(date -d "8 days ago" "+%m%d")".xml"
+          gunzip "epg-"$(date -d "8 hours" "+%m%d")".xml.gz"
+          sed -n '1,2p' "epg-"$(date -d "8 hours" "+%m%d")".xml" >> epg.xml 
+          for i in {9..1}; do
+          sed '1,2d' "epg-"$(date -d "$i days ago" "+%m%d")".xml" | sed '$d' >> epg.xml
+          done
+          sed '1,2d' "epg-"$(date -d "8 hours" "+%m%d")".xml" >> epg.xml  
+          gzip -c epg.xml > epg.xml.gz
           git config --local user.email "1062253873@qq.com"
           git config --local user.name "${{ github.actor }}"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
