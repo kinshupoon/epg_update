@@ -20,24 +20,24 @@ jobs:
 
       - name: Auto green
         run: |
-          wget https://epg.112114.xyz/pp.xml.gz -O "epg-"$(date -d "8 hours" "+%m%d")".xml.gz"
-          rm -f epg.xml "epg-"$(date -d "8 hours" "+%m%d")".xml" "epg-"$(date -d "8 days ago" "+%m%d")".xml"
-          gunzip "epg-"$(date -d "8 hours" "+%m%d")".xml.gz"
-          sed -n '1,2p' "epg-"$(date -d "8 hours" "+%m%d")".xml" >> epg.xml 
-          for i in {9..1}; do
-          sed '1,2d' "epg-"$(date -d "$i days ago" "+%m%d")".xml" | sed '$d' >> epg.xml
+          wget https://epg.112114.xyz/pp.xml.gz -O "epg-$(date -d '8 hours' '+%m%d').xml.gz"
+          rm -f epg.xml "epg-$(date -d '8 hours' '+%m%d').xml" "epg-$(date -d '8 days ago' '+%m%d').xml"
+          gunzip "epg-$(date -d '8 hours' '+%m%d').xml.gz"
+          sed -n '1,2p' "epg-$(date -d '8 hours' '+%m%d').xml" >> epg.xml 
+          for i in {7..1}; do
+          sed '1,2d' "epg-$(date -d '$i days ago' '+%m%d').xml" | sed '$d' >> epg.xml
           done
-          sed '1,2d' "epg-"$(date -d "8 hours" "+%m%d")".xml" >> epg.xml  
+          sed '1,2d' "epg-$(date -d '8 hours' '+%m%d').xml" >> epg.xml  
           gzip -c epg.xml > epg.xml.gz
           git config --local user.email "1062253873@qq.com"
           git config --local user.name "${{ github.actor }}"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git add "epg-"$(date -d "8 hours" "+%m%d")".xml"
-          git commit -m "Update epg-$(date -d "8 hours" "+%m%d").xml"          
+          git add "epg-$(date -d '8 hours' '+%m%d').xml"
+          git commit -m "Update epg-$(date -d '8 hours' '+%m%d').xml"          
           git add epg.xml
           git commit -m "Update epg.xml"
           git add epg.xml.gz
           git commit -m "Update epg.xml.gz"    
-          git rm "epg-"$(date -d "8 days ago" "+%m%d")".xml"
-          git commit -m "Remove epg-$(date -d "8 days ago" "+%m%d").xml"
+          git rm "epg-$(date -d '8 days ago' '+%m%d').xml"
+          git commit -m "Remove epg-$(date -d '8 days ago' '+%m%d').xml"
           git push origin main
