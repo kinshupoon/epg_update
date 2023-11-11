@@ -21,7 +21,7 @@ jobs:
       - name: Auto green
         run: |
           wget https://epg.112114.xyz/pp.xml.gz -O "epg-"$(date -d "8 hours" "+%m%d")".xml.gz"
-          rm epg.xml "epg-"$(date -d "8 hours" "+%m%d")".xml" "epg-"$(date -d "8 days ago" "+%m%d")".xml"
+          rm -f epg.xml "epg-"$(date -d "8 hours" "+%m%d")".xml" "epg-"$(date -d "8 days ago" "+%m%d")".xml"
           gunzip "epg-"$(date -d "8 hours" "+%m%d")".xml.gz"
           sed -n '1,2p' "epg-"$(date -d "8 hours" "+%m%d")".xml" >> epg.xml 
           for i in {9..1}; do
