@@ -32,6 +32,12 @@ jobs:
           git config --local user.email "1062253873@qq.com"
           git config --local user.name "${{ github.actor }}"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git add epg.xml epg.xml.gz "epg-"$(date -d "8 hours" "+%m%d")".xml"
+          git add "epg-"$(date -d "8 hours" "+%m%d")".xml"
+          git commit -m "Update epg-$(date -d "8 hours" "+%m%d").xml"          
+          git add epg.xml
           git commit -m "Update epg.xml"
-          git push
+          git add epg.xml.gz
+          git commit -m "Update epg.xml.gz"    
+          git rm "epg-"$(date -d "8 days ago" "+%m%d")".xml"
+          git commit -m "Remove epg-$(date -d "8 days ago" "+%m%d").xml"
+          git push origin main
