@@ -1,3 +1,4 @@
+
 name: rm old_epg
 
 on:
@@ -20,6 +21,8 @@ jobs:
 
       - name: Rm 10_days_ago epg
         run: |
+          git config --local user.email "1062253873@qq.com"
+          git config --local user.name "${{ github.actor }}"
           git rm "epg-"$(date -d "10 days ago" "+%m%d")".xml"
           git commit -m "Remove epg-$(date -d "10 days ago" "+%m%d").xml"
           git push origin main
