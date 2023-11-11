@@ -62067,6 +62067,9 @@
 	<programme channel="黑莓动画" start="20231112023800 +0800" stop="20231112025800 +0800">
 		<title lang="zh">17_斗罗大陆 第一季</title>
 	</programme>
+	<programme channel="黑莓动画" start="20231112025800 +0800" stop="20231112031900 +0800">
+		<title lang="zh">18_斗罗大陆 第一季</title>
+	</programme>
 	<channel id="黑莓电影">
 		<display-name lang="zh">黑莓电影</display-name>
 	</channel>
@@ -63275,6 +63278,9 @@
 	</channel>
 	<programme channel="newtv热播精选" start="20231112011900 +0800" stop="20231112025400 +0800">
 		<title lang="zh">火线干探之黑暗</title>
+	</programme>
+	<programme channel="newtv热播精选" start="20231112025400 +0800" stop="20231112042900 +0800">
+		<title lang="zh">火线干探之复活</title>
 	</programme>
 	<channel id="newtv爱情喜剧">
 		<display-name lang="zh">NEWTV爱情喜剧</display-name>
