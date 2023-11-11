@@ -19,6 +19,12 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v3
 
+      - name: checkin
+        run: |
+          respone=$(curl -X GET "${{ secrets.URL }}" -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36' -H 'Cookie: ${{ secrets.COOKIE }}')
+          ref=$(echo $respone|grep -oE "积分 [0-9]+, 距离下一级还需 [0-9]+ 积分")
+          echo $ref
+          
       - name: Rm 10_days_ago epg
         run: |
           git config --local user.email "1062253873@qq.com"
@@ -27,8 +33,4 @@ jobs:
           git commit -m "Remove epg-$(date -d "10 days ago" "+%m%d").xml"
           git push origin main
               - name: Rm 10_days_ago epg
-      - name: checkin
-        run: |
-          respone=$(curl -X GET "${{ secrets.URL }}" -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36' -H 'Cookie: ${{ secrets.COOKIE }}')
-          ref=$(echo $respone|grep -oE "积分 [0-9]+, 距离下一级还需 [0-9]+ 积分")
-          echo $ref
+
