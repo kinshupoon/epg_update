@@ -19,7 +19,7 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v3
 
-      - name: Auto green
+      - name: summary epg
         run: |
           wget https://epg.112114.xyz/pp.xml.gz -O "epg-"$(date -d "8 hours" "+%m%d")".xml.gz"
           rm -f epg.xml "epg-"$(date -d "8 hours" "+%m%d")".xml" "epg-"$(date -d "10 days ago" "+%m%d")".xml"
