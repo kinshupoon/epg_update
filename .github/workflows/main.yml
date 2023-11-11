@@ -34,4 +34,4 @@ jobs:
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git add epg.xml epg.xml.gz "epg-"$(date -d "8 hours" "+%m%d")".xml"
           git commit -m "Update epg.xml"
-          git push -f origin main
+          git push
