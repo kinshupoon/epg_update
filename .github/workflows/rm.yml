@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "30 0 * * *"   # 设置定时执行，例如每天零点执行
+    - cron: "30 16 * * *"   # 设置定时执行，例如每天零点执行
   workflow_dispatch:    # 允许手动执行
   
 jobs:
@@ -29,6 +29,6 @@ jobs:
         run: |
           git config --local user.email "${{ secrets.EMAIL }}"
           git config --local user.name "${{ github.actor }}"
-          git rm "epg-"$(date -d "10 days ago" "+%m%d")".xml"
+          git rm "epg-"$(date -d "10 days ago +8 hours" "+%m%d")".xml"
           git commit -m "Remove epg-$(date -d "10 days ago" "+%m%d").xml"
           git push origin main
