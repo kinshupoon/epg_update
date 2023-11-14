@@ -21,9 +21,17 @@ jobs:
 
       - name: checkin
         run: |
-          respone=$(curl -X GET "${{ secrets.URL }}" -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36' -H 'Cookie: ${{ secrets.COOKIE }}')
-          ref=$(echo $respone|grep -oE "积分 [0-9]+, 距离下一级还需 [0-9]+ 积分")
-          echo $ref
+          response_1=$(curl -X POST --data "username=${{ secrets.USERNAME }}&password=${{ secrets.PASSWORD }}" "${{ secrets.URL_1 }}")
+          ref_1=$(echo "$response_1" | grep -o "欢迎" | head -n 1)
+          if [ "$ref_1" = "欢迎" ]; then
+              echo "登录成功"
+          else
+              echo "登录失败"
+          fi
+          response_2=$(curl "${{ secrets.URL_2 }}")
+          ref_2=$(echo "$response_2" | grep -oE "积分 [0-9]+, 距离下一级还需 [0-9]+ 积分")
+          last_visit=$(echo "$response_2" | grep -oP '<li><em>最后访问</em>\K[^<]+' | sed 's/^\s*//;s/\s*$//')
+          echo "最后访问时间: $last_visit  $ref_2"
           
       - name: Rm 10_days_ago epg
         run: |
