@@ -21,7 +21,8 @@ jobs:
 
       - name: checkin
         run: |
-          sleep $(($RANDOM%300))
+          time=$(($RANDOM%300));echo $time
+          sleep $time
           response_1=$(curl -X POST --data "username=${{ secrets.USERNAME }}&password=${{ secrets.PASSWORD }}" "${{ secrets.URL_1 }}")
           ref_1=$(echo "$response_1" | grep -o "欢迎" | head -n 1)
           if [ "$ref_1" = "欢迎" ]; then
