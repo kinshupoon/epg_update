@@ -18,6 +18,14 @@ jobs:
     steps:
       - name: Clone repository
         uses: actions/checkout@v3
+          
+      - name: Rm 10_days_ago epg
+        run: |
+          git config --local user.email "${{ secrets.EMAIL }}"
+          git config --local user.name "${{ github.actor }}"
+          git rm "epg-"$(date -d "10 days ago +8 hours" "+%m%d")".xml"
+          git commit -m "Remove epg-$(date -d "10 days ago" "+%m%d").xml"
+          git push origin main
 
       - name: checkin
         run: |
@@ -34,11 +42,3 @@ jobs:
           ref_2=$(echo "$response_2" | grep -oE "积分 [0-9]+, 距离下一级还需 [0-9]+ 积分")
           last_visit=$(echo "$response_2" | grep -oP '<li><em>最后访问</em>\K[^<]+' | sed 's/^\s*//;s/\s*$//')
           echo "最后访问时间: $last_visit  $ref_2"
-          
-      - name: Rm 10_days_ago epg
-        run: |
-          git config --local user.email "${{ secrets.EMAIL }}"
-          git config --local user.name "${{ github.actor }}"
-          git rm "epg-"$(date -d "10 days ago +8 hours" "+%m%d")".xml"
-          git commit -m "Remove epg-$(date -d "10 days ago" "+%m%d").xml"
-          git push origin main
