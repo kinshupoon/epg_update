@@ -18,7 +18,10 @@ jobs:
     steps:
       - name: Clone repository
         uses: actions/checkout@v3
-
+        
+      - name: Check git status
+        run: git status
+        
       - name: summary epg
         run: |
           wget https://epg.112114.xyz/pp.xml.gz -O "epg-"$(date -d "8 hours" "+%m%d")".xml.gz"
@@ -26,17 +29,16 @@ jobs:
           gunzip "epg-"$(date -d "8 hours" "+%m%d")".xml.gz"
           sed -n '1,2p' "epg-"$(date -d "8 hours" "+%m%d")".xml" >> epg.xml 
           for i in {8..1}; do
-          sed '1,2d' "epg-"$(date -d "$i days ago" "+%m%d")".xml" | sed '$d' >> epg.xml
+            sed '1,2d' "epg-"$(date -d "$i days ago" "+%m%d")".xml" | sed '$d' >> epg.xml
           done
           sed '1,2d' "epg-"$(date -d "8 hours" "+%m%d")".xml" >> epg.xml  
           gzip -c epg.xml > epg.xml.gz
           git config --local user.email "${{ secrets.EMAIL }}"
           git config --local user.name "${{ github.actor }}"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git status
           git add "epg-"$(date -d "8 hours" "+%m%d")".xml"
-          git commit -m "Update epg-$(date -d "8 hours" "+%m%d").xml"          
           git add epg.xml
-          git commit -m "Update epg.xml"
           git add epg.xml.gz
-          git commit -m "Update epg.xml.gz"
+          git commit -m "Update epg-$(date -d "8 hours" "+%m%d").xml" -m "Update epg.xml" -m "Update epg.xml.gz"
           git push origin main
