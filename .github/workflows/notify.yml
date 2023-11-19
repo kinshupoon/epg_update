@@ -2,7 +2,7 @@ name: Notify on Failure
 
 on: 
   workflow_run:
-    workflows: ["epg"]  # 替换成你的工作流名称
+    workflows: ["epg", "rm"]  # 替换成你的工作流名称
     types: 
       - completed
 
