@@ -30,6 +30,7 @@ jobs:
           sed -n '1,2p' "epg-"$(date -d "8 hours" "+%m%d")".xml" >> epg.xml 
           for i in {8..1}; do
             sed '1,2d' "epg-"$(date -d "$i days ago +8 hours" "+%m%d")".xml" | sed '$d' >> epg.xml
+            echo "epg-"$(date -d "$i days ago +8 hours" "+%m%d")".xml"："汇总完成" 
           done
           sed '1,2d' "epg-"$(date -d "8 hours" "+%m%d")".xml" >> epg.xml  
           gzip -c epg.xml > epg.xml.gz
