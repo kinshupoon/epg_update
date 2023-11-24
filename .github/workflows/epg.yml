@@ -29,7 +29,7 @@ jobs:
           gunzip "epg-"$(date -d "8 hours" "+%m%d")".xml.gz"
           sed -n '1,2p' "epg-"$(date -d "8 hours" "+%m%d")".xml" >> epg.xml 
           for i in {8..1}; do
-            sed '1,2d' "epg-"$(date -d "$i days ago" "+%m%d")".xml" | sed '$d' >> epg.xml
+            sed '1,2d' "epg-"$(date -d "$i days ago +8 hours" "+%m%d")".xml" | sed '$d' >> epg.xml
           done
           sed '1,2d' "epg-"$(date -d "8 hours" "+%m%d")".xml" >> epg.xml  
           gzip -c epg.xml > epg.xml.gz
