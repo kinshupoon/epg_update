@@ -32,6 +32,7 @@ jobs:
           time=$(($RANDOM%300));echo $time
           sleep $time
           response_1=$(curl -X POST --data "username=${{ secrets.USERNAME }}&password=${{ secrets.PASSWORD }}" "${{ secrets.URL_1 }}")
+          echo "${{ secrets.USERNAME }}"
           ref_1=$(echo "$response_1" | grep -o "欢迎" | head -n 1)
           if [ "$ref_1" = "欢迎" ]; then
               echo "登录成功"
