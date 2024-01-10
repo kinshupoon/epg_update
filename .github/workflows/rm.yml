@@ -44,7 +44,7 @@ jobs:
           user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
           data="typeid=3159&subject=打卡&file=&message=签到&formhash=cc56a04c&usesig=1&posttime=1704904044"
           response_3=$(curl -X POST "${{ secrets.URL_3 }}" -H "User-Agent: $user_agent" -H "Cookie: ${{ secrets.COOKIE }}" --data "$data")
-          
+          echo "$response_3"
           response_2=$(curl "${{ secrets.URL_2 }}")
           ref_2=$(echo "$response_2" | grep -oE "积分 [0-9]+, 距离下一级还需 [0-9]+ 积分")
           last_visit=$(echo "$response_2" | grep -oP '<li><em>最后访问</em>\K[^<]+' | sed 's/^\s*//;s/\s*$//')
