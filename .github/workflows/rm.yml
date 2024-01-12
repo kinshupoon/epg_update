@@ -19,19 +19,19 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v3
           
-      - name: Rm 10_days_ago epg
-        run: |
-          echo "${{ secrets.USERNAME }}"
-          git config --local user.email "${{ secrets.EMAIL }}"
-          git config --local user.name "${{ github.actor }}"
-          git rm "epg-"$(date -d "10 days ago +8 hours" "+%m%d")".xml"
-          git commit -m "Remove epg-$(date -d "10 days ago" "+%m%d").xml"
-          git push origin main
+      # - name: Rm 10_days_ago epg
+      #   run: |
+      #     echo "${{ secrets.USERNAME }}"
+      #     git config --local user.email "${{ secrets.EMAIL }}"
+      #     git config --local user.name "${{ github.actor }}"
+      #     git rm "epg-"$(date -d "10 days ago +8 hours" "+%m%d")".xml"
+      #     git commit -m "Remove epg-$(date -d "10 days ago" "+%m%d").xml"
+      #     git push origin main
 
       - name: checkin
         run: |
           time=$(($RANDOM%120));echo $time
-          sleep $time
+          # sleep $time
           response_1=$(curl -X POST --data "username=${{ secrets.USERNAME }}&password=${{ secrets.PASSWORD }}" "${{ secrets.URL_1 }}")
           ref_1=$(echo "$response_1" | grep -o "欢迎" | head -n 1)
           if [ "$ref_1" = "欢迎" ]; then
@@ -40,7 +40,7 @@ jobs:
               echo "登录失败"
           fi
           time=$(( ($RANDOM % 60) + 120 ));echo $time
-          sleep $time
+          # sleep $time
           user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
           data="typeid=3159&subject=打卡&file=&message=签到&formhash=cc56a04c&usesig=1&posttime=1704904044"
           response_3=$(curl -X POST "${{ secrets.URL_3 }}" -H "User-Agent: $user_agent" -H "Cookie: ${{ secrets.COOKIE }}" --data "$data")
