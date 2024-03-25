@@ -21,7 +21,7 @@ jobs:
         
       - name: summary epg
         run: |
-          wget https://epg.112114.xyz/pp.xml.gz -O "epg-"$(date -d "8 hours" "+%m%d")".xml.gz"
+          wget https://raw.githubusercontent.com/sparkssssssssss/epg/main/pp.xml.gz -O "epg-"$(date -d "8 hours" "+%m%d")".xml.gz"
           rm -f epg.xml "epg-"$(date -d "8 hours" "+%m%d")".xml" "epg-"$(date -d "10 days ago" "+%m%d")".xml"
           gunzip "epg-"$(date -d "8 hours" "+%m%d")".xml.gz"
           sed -n '1,2p' "epg-"$(date -d "8 hours" "+%m%d")".xml" >> epg.xml 
