@@ -31,12 +31,23 @@ jobs:
           done
           sed '1,2d' "epg-"$(date -d "8 hours" "+%m%d")".xml" >> epg.xml  
           gzip -c epg.xml > epg.xml.gz
+
+          #更新stream-link的epg
+          wget http://content.stream-link.org/epg/guide.xml -O guide.xml
+          id_mapping_file="./channel.txt"
+          xml_file="./guide.xml"
+          # 逐行读取 id 对应名单文件，并更新 XML 文件中对应的频道名称
+          while IFS=',' read -r id name; do
+              # 使用 sed 命令替换 XML 文件中的频道名称
+              sed -i "s/<channel id=\"$id\"><display-name>[^<]*<\/display-name>/<channel id=\"$id\"><display-name>$name<\/display-name>/g" "$xml_file"
+          done < "$id_mapping_file"
+          echo "XML 文件已更新"
+            
           git config --local user.email "${{ secrets.EMAIL }}"
           git config --local user.name "${{ github.actor }}"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git status
-          git add "epg-"$(date -d "8 hours" "+%m%d")".xml"
-          git add epg.xml
-          git add epg.xml.gz
-          git commit -m "Update epg-$(date -d "8 hours" "+%m%d").xml" -m "Update epg.xml" -m "Update epg.xml.gz"
+          git add .
+          git status
+          git commit -m "Update epg-$(date -d "8 hours" "+%m%d").xml，epg.xml，epg.xml.gz，guide.xml"
           git push origin main
