@@ -21,7 +21,7 @@ PhoenixHongKongChannel,鳳凰衛視香港台
 MacauLotusTv,澳門蓮花衛視
 TVBXingHe,TVB星河台(粵語)
 TVBXingHe,TVB星河台(國語)
-TVBClassic,TVB千禧經典台
+TVBClassic,千禧經典台
 CelestialMoviesMalaysia,天映頻道
 1,MytvSuper
 AsianDrama,亞洲劇集台
