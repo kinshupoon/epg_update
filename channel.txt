@@ -8,7 +8,7 @@ Jade.my,華麗(翡翠台)
 nowNews,now新聞台
 nowBusinessNewsChannel,now財經台
 ViuTV,ViuTV99
-EntertainmentNews,TVB娛樂新聞台
+EntertainmentNews,娛樂新聞台
 RTHKTV31,港台电视31
 RTHKTV32,港台电视32
 RTHKTV33,港台电视33
@@ -24,8 +24,8 @@ TVBXingHe,TVB星河台(國語)
 TVBClassic,千禧經典台
 CelestialMoviesMalaysia,天映頻道
 1,MytvSuper
-AsianDrama,亞洲劇集台
-ChineseDrama,華語劇集台
+AsianDrama,亞洲劇台
+ChineseDrama,華語劇台
 MeiAhMovieChannel,美亞電影台
 AsianFoodNetwork,Asian
 AstroAEC,Astro
@@ -104,6 +104,7 @@ KBSWorld,KBS
 9999,Japan
 GEM,Sony
 PLAYY,PLAYY電影
+NickJr.de,Nick Jr
 sonypixhd,SONY
 4gtv-live114,東森新聞
 4gtv-live019,東森財經新聞
