@@ -1,6 +1,6 @@
 Jade.my,華麗(翡翠台)
 81,翡翠台
-82,J2台
+TVBPlus,TVB Plus
 83,無綫新聞台
 85,無綫財經·體育·資訊台
 83,無綫新聞台
@@ -19,7 +19,7 @@ PhoenixInfoNewsChannel,鳳凰衛視資訊台
 PhoenixChineseChannel,鳳凰衛視中文台
 PhoenixHongKongChannel,鳳凰衛視香港台
 MacauLotusTv,澳門蓮花衛視
-TVBXingHe,TVB星河台(粵語)
+TVBXingHe.my,TVB星河台
 TVBXingHe,TVB星河台(國語)
 TVBClassic,千禧經典台
 CelestialMoviesMalaysia,天映頻道
