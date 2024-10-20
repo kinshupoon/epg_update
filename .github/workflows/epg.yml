@@ -32,16 +32,16 @@ jobs:
           sed '1,2d' "epg-"$(date -d "8 hours" "+%m%d")".xml" >> epg.xml  
           gzip -c epg.xml > epg.xml.gz
 
-          #更新stream-link的epg
-          wget --user-agent="okhttp" http://content.stream-link.org/epg/guide.xml -O guide.xml
-          id_mapping_file="./channel.txt"
-          xml_file="./guide.xml"
-          # 逐行读取 id 对应名单文件，并更新 XML 文件中对应的频道名称
-          while IFS=',' read -r id name; do
-              # 使用 sed 命令替换 XML 文件中的频道名称
-              sed -i "s/<channel id=\"$id\"><display-name>[^<]*<\/display-name>/<channel id=\"$id\"><display-name>$name<\/display-name>/g" "$xml_file"
-          done < "$id_mapping_file"
-          echo "XML 文件已更新"
+          # #更新stream-link的epg
+          # wget --user-agent="okhttp" http://content.stream-link.org/epg/guide.xml -O guide.xml
+          # id_mapping_file="./channel.txt"
+          # xml_file="./guide.xml"
+          # # 逐行读取 id 对应名单文件，并更新 XML 文件中对应的频道名称
+          # while IFS=',' read -r id name; do
+          #     # 使用 sed 命令替换 XML 文件中的频道名称
+          #     sed -i "s/<channel id=\"$id\"><display-name>[^<]*<\/display-name>/<channel id=\"$id\"><display-name>$name<\/display-name>/g" "$xml_file"
+          # done < "$id_mapping_file"
+          # echo "XML 文件已更新"
             
           git config --local user.email "${{ secrets.EMAIL }}"
           git config --local user.name "${{ github.actor }}"
