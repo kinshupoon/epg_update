@@ -33,7 +33,7 @@ jobs:
           gzip -c epg.xml > epg.xml.gz
 
           #更新stream-link的epg
-          wget http://content.stream-link.org/epg/guide.xml -O guide.xml
+          wget --user-agent="okhttp" http://content.stream-link.org/epg/guide.xml -O guide.xml
           id_mapping_file="./channel.txt"
           xml_file="./guide.xml"
           # 逐行读取 id 对应名单文件，并更新 XML 文件中对应的频道名称
