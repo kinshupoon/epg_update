@@ -21,7 +21,7 @@ jobs:
         
       - name: summary epg
         run: |
-          curl -s -A "okhttp/3.8.1" -o epg.xml "http://epg.51zmt.top:8000/e.xml"
+          curl -s -A "okhttp/3.8.1" -o e.xml "http://epg.51zmt.top:8000/e.xml"
           wget https://raw.githubusercontent.com/sparkssssssssss/epg/main/pp.xml.gz -O "epg-"$(date -d "8 hours" "+%m%d")".xml.gz"
           rm -f epg.xml "epg-"$(date -d "8 hours" "+%m%d")".xml" "epg-"$(date -d "10 days ago" "+%m%d")".xml"
           gunzip "epg-"$(date -d "8 hours" "+%m%d")".xml.gz"
